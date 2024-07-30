@@ -248,20 +248,21 @@ const getUrl = require('getUrl');
 const Object = require('Object');
 const makeTableMap = require('makeTableMap');
 const getType = require('getType');
+const encodeUri = require('encodeUri');
 
 function mergeObjects(obj1, obj2) {
   const acc = [];
   const obj1Entries = Object.entries(obj1);
   const obj2Entries = Object.entries(obj2);
-
+  
   obj1Entries.forEach((entry) => {
     acc.push({key: entry[0], value: entry[1] });
   });
-
+  
   obj2Entries.forEach((entry) => {
     acc.push({key: entry[0], value: entry[1] });
   });
-
+  
   return makeTableMap(acc, 'key', 'value');
 }
 
@@ -290,7 +291,7 @@ const _t2sparams = mergeObjects({
   wl: serializeList(data.wl),
   kW: data.kW,
   hasRankOption: data.hasRankOption,
-
+  
   // specific to certain pages
   iID: data.iID,
   aID: serializeList(data.aID),
@@ -308,7 +309,7 @@ log("_t2sparams", _t2sparams);
 
 setInWindow("_t2sparams", _t2sparams, true);
 
-injectScript(data.API_URL, data.gtmOnSuccess, data.gtmOnFailure);
+injectScript(encodeUri(data.API_URL), data.gtmOnSuccess, data.gtmOnFailure);
 
 
 ___WEB_PERMISSIONS___
