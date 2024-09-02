@@ -41,18 +41,6 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "API_URL",
-    "displayName": "API URL",
-    "simpleValueType": true,
-    "help": "If your environnement is in the United States: https://static.us1.target2sell.mirakl.net/t2s.min.js\nElse:\nhttps://static.target2sell.com/t2s.min.js",
-    "valueValidators": [
-      {
-        "type": "NON_EMPTY"
-      }
-    ]
-  },
-  {
-    "type": "TEXT",
     "name": "cID",
     "displayName": "Customer public ID (cID)",
     "simpleValueType": true,
@@ -82,6 +70,15 @@ ___TEMPLATE_PARAMETERS___
     "type": "LABEL",
     "name": "Other fields",
     "displayName": "Other fields"
+  },
+  {
+    "type": "TEXT",
+    "name": "API_URL",
+    "displayName": "API URL",
+    "simpleValueType": true,
+    "help": "If your environnement is in the United States: https://static.us1.target2sell.mirakl.net/t2s.min.js\nElse (default value if this field is empty)\nhttps://static.target2sell.com/t2s.min.js",
+    "defaultValue": "https://static.target2sell.com/t2s.min.js",
+    "notSetText": "It will use default value: https://static.target2sell.com/t2s.min.js"
   },
   {
     "type": "TEXT",
