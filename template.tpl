@@ -41,8 +41,8 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "cID",
-    "displayName": "Customer public ID (cID)",
+    "name": "publisher_id",
+    "displayName": "Publisher ID",
     "simpleValueType": true,
     "help": "Your own unique identifier as a Mirakl Target2Sell user.  It is sent to you by email when your Mirakl Target2Sell account is created.",
     "valueValidators": [
@@ -53,8 +53,8 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "pID",
-    "displayName": "Page ID (pID)",
+    "name": "page_id",
+    "displayName": "Page ID",
     "simpleValueType": true,
     "help": "This is the page identifier",
     "valueValidators": [
@@ -82,15 +82,15 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "uEM",
-    "displayName": "User Email (uEM)",
+    "name": "user_email",
+    "displayName": "User Email",
     "simpleValueType": true,
     "help": "It is the encrypted email address of the visitor (if logged in)."
   },
   {
     "type": "TEXT",
-    "name": "bP",
-    "displayName": "Basket (bP)",
+    "name": "basket_products",
+    "displayName": "Basket products",
     "simpleValueType": true,
     "help": "It is a formatted list of the identifiers of the products currently in the cart. Each product identifier must be separated from the next one by \"|\". i.e. p456|p76|p890|p56."
   },
@@ -99,7 +99,7 @@ ___TEMPLATE_PARAMETERS___
     "name": "domain",
     "displayName": "Domain (domain)",
     "simpleValueType": true,
-    "help": "This parameter is required if the beginning of your website sub-domain changes according to your pages (e.g.\" www.mywebsite.com\" becomes \"product456.mywebsite.com\" when visiting the product 456 page).  Configure the parameter following this example: _t2sparams.domain\u003d\u0027.mywebsite.com\u0027."
+    "help": "This parameter is required if the beginning of your website sub-domain changes according to your pages (e.g.\" www.mywebsite.com\" becomes \"product456.mywebsite.com\" when visiting the product 456 page).  Configure the parameter following this example: _miraklTagParameters.domain\u003d\u0027.mywebsite.com\u0027."
   },
   {
     "type": "TEXT",
@@ -110,22 +110,22 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "setID",
-    "displayName": "Set ID (setId)",
+    "name": "set_id",
+    "displayName": "Set ID",
     "simpleValueType": true,
     "help": "This parameter is required if you need a different dimension because you have a catalog that changes according to different stores (different product price, different stock quantity, and so on)."
   },
   {
     "type": "TEXT",
-    "name": "wl",
-    "displayName": "Wish list (wl)",
+    "name": "wish_list",
+    "displayName": "Wish list",
     "simpleValueType": true,
     "help": "It is a formatted list of product identifiers for products currently in the wish list. Each product identifier must be separated from the next one by \"|\". i.e. p456|p76|p890|p56."
   },
   {
     "type": "TEXT",
-    "name": "kW",
-    "displayName": "Keywords (kw)",
+    "name": "keywords",
+    "displayName": "Keywords",
     "simpleValueType": true,
     "help": "This parameter retrieves the keywords written by the visitor in the search field."
   },
@@ -136,8 +136,8 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "iID",
-    "displayName": "Item ID (iID)",
+    "name": "product_ids",
+    "displayName": "Item ID",
     "simpleValueType": true,
     "help": "This field is required for product page, category/list page, cart page, post-payment page and search result page. Might be a single value (for product page) or several values separated with \"|\" (example: \"a1|a2|a3\").",
     "enablingConditions": [
@@ -172,53 +172,53 @@ ___TEMPLATE_PARAMETERS___
         "isUnique": false
       }
     ],
-    "help": "Use this prefix to declare the segments that a visitor belongs to. Segments are defined by your website. User segments can be used to trigger contextual rules. Every segment must be declared using the crm_ prefix.  For instance: _t2sparams.crm_vipVisitor \u003d true; _t2sparams.crm_gender \u003d \"female\"; _t2sparams.crm_favoriteStore \u003d \"london\"."
+    "help": "Use this prefix to declare the segments that a visitor belongs to. Segments are defined by your website. User segments can be used to trigger contextual rules. Every segment must be declared using the crm_ prefix.  For instance: _miraklTagParameters.crm_vipVisitor \u003d true; _miraklTagParameters.crm_gender \u003d \"female\"; _miraklTagParameters.crm_favoriteStore \u003d \"london\"."
   },
   {
     "type": "TEXT",
-    "name": "aID",
-    "displayName": "Category identifier (aID)",
+    "name": "category_id",
+    "displayName": "Category identifier",
     "simpleValueType": true,
     "help": "It is the identifier of the main category of the list. You can also declare several category IDs, each separated by \"|\".  Mirakl Target2Sell requires the ID of the category, not the name."
   },
   {
     "type": "TEXT",
-    "name": "pageNbr",
+    "name": "page_number",
     "displayName": "Pagination position (pageNbr)",
     "simpleValueType": true,
     "help": "It is the current position in a paginated list.  This parameter is required for the user rank option (Organize)."
   },
   {
     "type": "TEXT",
-    "name": "bS",
-    "displayName": "Cart total price (bS)",
+    "name": "basket_amount",
+    "displayName": "Cart total price",
     "simpleValueType": true,
     "help": "It is the total price for the order in the cart (with VAT included). If the total amount of the order includes a discount, you can change the value of this parameter accordingly. The expected decimal mark is a dot \".\"."
   },
   {
     "type": "TEXT",
-    "name": "qTE",
-    "displayName": "Cart product quantity (qTE)",
+    "name": "products_quantity",
+    "displayName": "Cart product quantity",
     "simpleValueType": true,
     "help": "It is a formatted list of the quantity for each product in the cart. Each quantity must be separated from the next one by \"|\"."
   },
   {
     "type": "TEXT",
-    "name": "oID",
-    "displayName": "Order ID (oID)",
+    "name": "order_id",
+    "displayName": "Order ID",
     "simpleValueType": true,
     "help": "It is the unique identifier of the order placed by the visitor."
   },
   {
     "type": "TEXT",
-    "name": "priceL",
-    "displayName": "Price list (priceL)",
+    "name": "price_list",
+    "displayName": "Price list",
     "simpleValueType": true,
     "help": "It is a formatted list of the price of each product purchased. Each amount has to be separated from the next one by “|”, and equals the price of each product multiplied by the quantity. This parameter is necessary if a discount is applied (in B2B mainly). The expected decimal mark is a dot “.”"
   },
   {
     "type": "CHECKBOX",
-    "name": "hasRankOption",
+    "name": "has_rank_option",
     "checkboxText": "Ranking option",
     "simpleValueType": true,
     "help": "Parameter in the tracking script of all the website pages where you want to use Organize to rank products. See https://help.mirakl.net/bundle/mirakl-t2s-operator/page/topics/t2s/integrations/prerequisites/Organize_ranking_parameter.htm",
@@ -226,7 +226,7 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "offerID",
+    "name": "offer_id",
     "displayName": "Offer ID",
     "simpleValueType": true,
     "help": "It is a formatted list of the purchased 3P products. Each element of the list includes the productID (iId) and its offerID, separated by \":\". Each element must be separated from the next one by \"|\". You do not have to put 1P products into this list."
@@ -251,15 +251,15 @@ function mergeObjects(obj1, obj2) {
   const acc = [];
   const obj1Entries = Object.entries(obj1);
   const obj2Entries = Object.entries(obj2);
-  
+
   obj1Entries.forEach((entry) => {
     acc.push({key: entry[0], value: entry[1] });
   });
-  
+
   obj2Entries.forEach((entry) => {
     acc.push({key: entry[0], value: entry[1] });
   });
-  
+
   return makeTableMap(acc, 'key', 'value');
 }
 
@@ -275,36 +275,36 @@ function serializeList(value) {
   return getType(value) == 'array' ? value.join('|'): value;
 }
 
-const _t2sparams = mergeObjects({
-  cID: data.cID,
-  uEM: data.uEM,
-  cURL: getUrl(),
-  eN: 'view',
-  bP: serializeList(data.bP),
-  pID: data.pID,
+const _miraklTagParameters = mergeObjects({
+  publisher_id: data.publisher_id,
+  user_mail: data.user_mail,
+  url: getUrl(),
+  event_name: 'view',
+  basket_products: serializeList(data.basket_products),
+  page_id: data.page_id,
   domain: data.domain,
   lang: data.lang,
-  setID: data.setID,
-  wl: serializeList(data.wl),
-  kW: data.kW,
-  hasRankOption: data.hasRankOption,
-  
+  set_id: data.set_id,
+  wish_list: serializeList(data.wish_list),
+  keywords: data.keywords,
+  has_rank_option: data.has_rank_option,
+
   // specific to certain pages
-  iID: data.iID,
-  aID: serializeList(data.aID),
-  pageNbr: data.pageNbr,
-  bS: data.bS,
-  qTE: data.qTE,
-  oID: data.oID,
-  priceL: data.priceL,
-  offerID: data.offerID
+  product_ids: data.product_ids,
+  category_id: serializeList(data.category_id),
+  page_number: data.page_number,
+  basket_amount: data.basket_amount,
+  products_quantity: data.products_quantity,
+  order_id: data.order_id,
+  price_list: data.price_list,
+  offer_id: data.offer_idD
 }, makeTableMap(data.CRM_PARAMS || [], 'key', 'value') || {});
 
-removeUndefinedKeys(_t2sparams);
+removeUndefinedKeys(_miraklTagParameters);
 
-log("_t2sparams", _t2sparams);
+log("_miraklTagParameters", _miraklTagParameters);
 
-setInWindow("_t2sparams", _t2sparams, true);
+setInWindow("_miraklTagParameters", _miraklTagParameters, true);
 
 injectScript(encodeUri(data.API_URL), data.gtmOnSuccess, data.gtmOnFailure);
 
@@ -398,7 +398,7 @@ ___WEB_PERMISSIONS___
                 "mapValue": [
                   {
                     "type": 1,
-                    "string": "_t2sparams"
+                    "string": "_miraklTagParameters"
                   },
                   {
                     "type": 8,
@@ -479,12 +479,12 @@ scenarios:
 
     const mockData = {
       API_URL: 'https://prp-static.target2sell.com/t2s.js',
-      cID: 'CLEANMAGENTO2',
-      pID: 1000,
+      publisher_id: 'CLEANMAGENTO2',
+      page_id: 1000,
       CRM_PARAMS: [],
-      aID: ['a1', 'a2', 'a3'],
-      oID: 'orderID',
-      kW: "test"
+      category_id: ['a1', 'a2', 'a3'],
+      order_id: 'orderID',
+      keywords: "test"
     };
 
     // Call runCode to run the template's code.
@@ -492,17 +492,17 @@ scenarios:
 
     assertApi('setInWindow').wasCalled();
 
-    assertThat(copyFromWindow('_t2sparams')).isEqualTo({"cID":"CLEANMAGENTO2","cURL":"https://tagmanager.googleusercontent.com/js_sandbox_v2.html","eN":"view","pID":1000,"aID":"a1|a2|a3", "oID":"orderID", "kW": "test"});
+    assertThat(copyFromWindow('_miraklTagParameters')).isEqualTo({"publisher_id":"CLEANMAGENTO2","url":"https://tagmanager.googleusercontent.com/js_sandbox_v2.html","event_name":"view","page_id":1000,"category_id":"a1|a2|a3", "order_id":"orderID", "keywords": "test"});
 - name: Should convert an array of bP to a string with values seperated with pipes
   code: |-
     const copyFromWindow = require('copyFromWindow');
 
     const mockData = {
       API_URL: 'https://prp-static.target2sell.com/t2s.js',
-      cID: 'CLEANMAGENTO2',
-      pID: 1000,
+      publisher_id: 'CLEANMAGENTO2',
+      page_id: "1000",
       CRM_PARAMS: [],
-      bP: ['a1', 'a2', 'a3']
+      basket_products: ['a1', 'a2', 'a3']
     };
 
     // Call runCode to run the template's code.
@@ -510,17 +510,17 @@ scenarios:
 
     assertApi('setInWindow').wasCalled();
 
-    assertThat(copyFromWindow('_t2sparams')).isEqualTo({"cID":"CLEANMAGENTO2","cURL":"https://tagmanager.googleusercontent.com/js_sandbox_v2.html","eN":"view","pID":1000,"bP":"a1|a2|a3"});
+    assertThat(copyFromWindow('_miraklTagParameters')).isEqualTo({"publisher_id":"CLEANMAGENTO2","url":"https://tagmanager.googleusercontent.com/js_sandbox_v2.html","event_name":"view","page_id":"1000","basket_products":"a1|a2|a3"});
 - name: Should convert an array of wl to a string with values seperated with pipes
   code: |-
     const copyFromWindow = require('copyFromWindow');
 
     const mockData = {
       API_URL: 'https://prp-static.target2sell.com/t2s.js',
-      cID: 'CLEANMAGENTO2',
-      pID: 1000,
+      publisher_id: 'CLEANMAGENTO2',
+      page_id: "1000",
       CRM_PARAMS: [],
-      wl: ['a1', 'a2', 'a3']
+      wish_list: ['a1', 'a2', 'a3']
     };
 
     // Call runCode to run the template's code.
@@ -528,15 +528,15 @@ scenarios:
 
     assertApi('setInWindow').wasCalled();
 
-    assertThat(copyFromWindow('_t2sparams')).isEqualTo({"cID":"CLEANMAGENTO2","cURL":"https://tagmanager.googleusercontent.com/js_sandbox_v2.html","eN":"view","pID":1000,"wl":"a1|a2|a3"});
+    assertThat(copyFromWindow('_miraklTagParameters')).isEqualTo({"publisher_id":"CLEANMAGENTO2","url":"https://tagmanager.googleusercontent.com/js_sandbox_v2.html","event_name":"view","page_id":"1000","wish_list":"a1|a2|a3"});
 - name: Should add any CRM_PARAMS
   code: |-
     const copyFromWindow = require('copyFromWindow');
 
     const mockData = {
       API_URL: 'https://prp-static.target2sell.com/t2s.js',
-      cID: 'CLEANMAGENTO2',
-      pID: 1000,
+      publisher_id: 'CLEANMAGENTO2',
+      page_id: "1000",
       CRM_PARAMS: [{
         key: 'crm_vipVisitor',
         value: true
@@ -548,7 +548,7 @@ scenarios:
 
     assertApi('setInWindow').wasCalled();
 
-    assertThat(copyFromWindow('_t2sparams')).isEqualTo({"cID":"CLEANMAGENTO2","cURL":"https://tagmanager.googleusercontent.com/js_sandbox_v2.html","eN":"view","pID":1000, crm_vipVisitor: true});
+    assertThat(copyFromWindow('_miraklTagParameters')).isEqualTo({"publisher_id":"CLEANMAGENTO2","url":"https://tagmanager.googleusercontent.com/js_sandbox_v2.html","event_name":"view","page_id":"1000", crm_vipVisitor: true});
 
 
 ___NOTES___
